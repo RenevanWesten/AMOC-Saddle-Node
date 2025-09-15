@@ -66,6 +66,6 @@ legend_labels 	= [l.get_label() for l in graphs]
 legend_1	= ax2.legend(graphs, legend_labels, loc=(1.02, 0.30), ncol=1, framealpha = 1.0, numpoints = 1)
 
 
-ax.set_title(r'a) AMOC response decomposition, $\partial_t F_H = 1.5 \times 10^{-4}$ Sv yr$^{-1}$')
+ax.set_title(r'b) AMOC response decomposition, $\partial_t F_H = 1.5 \times 10^{-4}$ Sv yr$^{-1}$')
 
 show()
