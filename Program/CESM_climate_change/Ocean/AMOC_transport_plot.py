@@ -43,8 +43,9 @@ fig, ax	= subplots()
 
 ax.fill_between([-100, 5000], 16, 19, alpha=0.25, edgecolor='orange', facecolor='orange')
 
-ax.plot(time_hist_rcp45_branch_0600[156:], transport_hist_rcp45_branch_0600[156:], '-', color = 'dodgerblue', linewidth = 1)
-ax.plot(time_hist_rcp85_branch_0600, transport_hist_rcp85_branch_0600, '-', color = 'firebrick', linewidth = 1)
+ax.plot(time_hist_rcp45_branch_0600[155:], transport_hist_rcp45_branch_0600[155:], '-', color = 'dodgerblue', linewidth = 1)
+ax.plot(time_hist_rcp85_branch_0600[155:], transport_hist_rcp85_branch_0600[155:], '-', color = 'firebrick', linewidth = 1)
+ax.plot(time_hist_rcp85_branch_0600[:156], transport_hist_rcp85_branch_0600[:156], '-', color = 'k', linewidth = 1)
 
 ax.set_xlim(1850, 2500)
 ax.set_ylim(-2, 22)
@@ -53,10 +54,11 @@ ax.set_ylabel('Volume transport (Sv)')
 ax.set_xticks([1900, 2000, 2100, 2200, 2300, 2400, 2500])
 ax.grid()
 
-graph_1		= ax.plot([-100, -100], [-100, -100], '-', color = 'dodgerblue', linewidth = 1.5, label = 'Hist/RCP4.5')
-graph_2		= ax.plot([-100, -100], [-100, -100], '-', color = 'firebrick', linewidth = 1.5, label = 'Hist/RCP8.5')
+graph_1		= ax.plot([-100, -100], [-100, -100], '-', color = 'k', linewidth = 2, label = 'Historical')
+graph_2		= ax.plot([-100, -100], [-100, -100], '-', color = 'dodgerblue', linewidth = 2, label = 'RCP4.5')
+graph_3		= ax.plot([-100, -100], [-100, -100], '-', color = 'firebrick', linewidth = 2, label = 'RCP8.5')
 
-graphs	      	= graph_1 + graph_2
+graphs	      	= graph_1 + graph_2 + graph_3
 legend_labels 	= [l.get_label() for l in graphs]
 legend_1	= ax.legend(graphs, legend_labels, loc='lower left', ncol=1, framealpha = 1.0, numpoints = 1)
 
@@ -69,8 +71,9 @@ fig, ax	= subplots()
 
 ax.fill_between([-100, 5000], 16, 19, alpha=0.25, edgecolor='orange', facecolor='orange')
 
-ax.plot(time_hist_rcp45_branch_1500[156:], transport_hist_rcp45_branch_1500[156:], '-', color = 'dodgerblue', linewidth = 1)
-ax.plot(time_hist_rcp85_branch_1500, transport_hist_rcp85_branch_1500, '-', color = 'firebrick', linewidth = 1)
+ax.plot(time_hist_rcp45_branch_1500[155:], transport_hist_rcp45_branch_1500[155:], '-', color = 'dodgerblue', linewidth = 1)
+ax.plot(time_hist_rcp85_branch_1500[155:], transport_hist_rcp85_branch_1500[155:], '-', color = 'firebrick', linewidth = 1)
+ax.plot(time_hist_rcp85_branch_1500[:156], transport_hist_rcp85_branch_1500[:156], '-', color = 'k', linewidth = 1)
 
 ax.set_xlim(1850, 2500)
 ax.set_ylim(-2, 22)
@@ -81,10 +84,11 @@ ax.grid()
 
 ax.set_title('b) AMOC strength at 26$^{\circ}$N ($\overline{F_H} = 0.45$ Sv)')
 
-graph_1		= ax.plot([-100, -100], [-100, -100], '-', color = 'dodgerblue', linewidth = 1.5, label = 'Hist/RCP4.5')
-graph_2		= ax.plot([-100, -100], [-100, -100], '-', color = 'firebrick', linewidth = 1.5, label = 'Hist/RCP8.5')
+graph_1		= ax.plot([-100, -100], [-100, -100], '-', color = 'k', linewidth = 2, label = 'Historical')
+graph_2		= ax.plot([-100, -100], [-100, -100], '-', color = 'dodgerblue', linewidth = 2, label = 'RCP4.5')
+graph_3		= ax.plot([-100, -100], [-100, -100], '-', color = 'firebrick', linewidth = 2, label = 'RCP8.5')
 
-graphs	      	= graph_1 + graph_2
+graphs	      	= graph_1 + graph_2 + graph_3
 legend_labels 	= [l.get_label() for l in graphs]
 legend_1	= ax.legend(graphs, legend_labels, loc='lower left', ncol=1, framealpha = 1.0, numpoints = 1)
 
