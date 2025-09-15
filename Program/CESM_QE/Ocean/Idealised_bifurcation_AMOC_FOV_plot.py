@@ -138,11 +138,7 @@ cbar.set_label('Critical freshwater flux forcing, $F_H^{\mathrm{c}}$ (Sv)')
 #CESM first 50 years
 ax.plot([np.min(AMOC[:50]), np.min(AMOC[:50]), np.max(AMOC[:50]), np.max(AMOC[:50]), np.min(AMOC[:50])], [np.min(FOV[:50]), np.max(FOV[:50]), np.max(FOV[:50]), np.min(FOV[:50]), np.min(FOV[:50])], '-k', linewidth = 2.0)
 
-#Observations
-ax.plot([16, 16, 19, 19, 16], [-0.28, -0.05, -0.05, -0.28, -0.28], '-b', linewidth = 2.0)
-
 ax.text(np.mean(AMOC[:50]), np.min(FOV[:50])-0.01, 'CESM', verticalalignment='top', horizontalalignment='center', color = 'k', fontsize = 13)
-ax.text(17.5, -0.05+0.01, 'Observations', verticalalignment='bottom', horizontalalignment='center', color = 'b', fontsize = 13)
 
 ax.set_xlim(0, 25)
 ax.set_ylim(-0.3, 0.3)
@@ -161,7 +157,7 @@ F_H		   = np.arange(0, 0.6000001, 0.00001)
 AMOC_1, AMOC_un_1, FovS_1, FovS_un_1	= AMOCvsHosing(AMOC_0, FovS_0, F_H * 0.86)
 AMOC_2, AMOC_un_2, FovS_2, FovS_un_2 	= AMOCvsHosing(np.max(AMOC[:50]), np.max(FOV[:50]), F_H * 0.86)
 AMOC_3, AMOC_un_3, FovS_3, FovS_un_3 	= AMOCvsHosing(np.min(AMOC[:50]), np.min(FOV[:50]), F_H * 0.86)
-AMOC_4, AMOC_un_4, FovS_4, FovS_un_4	= AMOCvsHosing(17, -0.15, F_H * 0.86)	#Observations
+AMOC_4, AMOC_un_4, FovS_4, FovS_un_4	= AMOCvsHosing(17, -0.15, F_H)	#Observations
 
 #-----------------------------------------------------------------------------------------
 
@@ -170,7 +166,7 @@ fig, ax		= subplots()
 graph_1		= ax.plot(F_H, AMOC_1, '-', color = 'k', linewidth = 1.5, label = 'CESM (mean)')
 graph_2		= ax.plot(F_H, AMOC_2, '-', color = 'r', linewidth = 1.5, label = 'CESM (max)')
 graph_3		= ax.plot(F_H, AMOC_3, '-', color = 'b', linewidth = 1.5, label = 'CESM (min)')
-graph_4		= ax.plot(F_H, AMOC_4, '-', color = 'firebrick', linewidth = 1.5, label = 'Observations')
+graph_4		= ax.plot(F_H, AMOC_4, '-', color = 'firebrick', linewidth = 1.5, label = 'Observed values')
 
 ax.plot(F_H, AMOC_un_1, ':', color = 'k', linewidth = 1.5)
 ax.plot(F_H, AMOC_un_2, ':', color = 'r', linewidth = 1.5)
@@ -216,7 +212,7 @@ fig, ax		= subplots()
 graph_1		= ax.plot(F_H, FovS_1, '-', color = 'k', linewidth = 1.5, label = 'CESM (mean)')
 graph_2		= ax.plot(F_H, FovS_2, '-', color = 'r', linewidth = 1.5, label = 'CESM (max)')
 graph_3		= ax.plot(F_H, FovS_3, '-', color = 'b', linewidth = 1.5, label = 'CESM (min)')
-graph_4		= ax.plot(F_H, FovS_4, '-', color = 'firebrick', linewidth = 1.5, label = 'Observations')
+graph_4		= ax.plot(F_H, FovS_4, '-', color = 'firebrick', linewidth = 1.5, label = 'Observed values')
 
 ax.plot(F_H, FovS_un_1, ':', color = 'k', linewidth = 1.5)
 ax.plot(F_H, FovS_un_2, ':', color = 'r', linewidth = 1.5)
