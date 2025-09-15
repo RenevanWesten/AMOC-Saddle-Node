@@ -66,6 +66,6 @@ legend_labels 	= [l.get_label() for l in graphs]
 legend_1	= ax2.legend(graphs, legend_labels, loc=(1.02, 0.30), ncol=1, framealpha = 1.0, numpoints = 1)
 
 
-ax.set_title('b) AMOC response decomposition, $\overline{F_H} = 0.51$ Sv')
+ax.set_title('a) AMOC response decomposition, $\overline{F_H} = 0.51$ Sv')
 
 show()
