@@ -1,6 +1,6 @@
 # AMOC-Saddle-Node
 
-A Saddle-Node Bifurcation is Causing  the AMOC Collapse in the Community Earth System Model, submitted to JGR: Oceans (December 2024)
+A Saddle-Node Bifurcation may be Causing the AMOC Collapse in the Community Earth System Model, submitted to Earth System Dynamics (September 2025)
 
 René M. van Westen, Elian Vanderborght and Henk A. Dijkstra
 
